@@ -6,8 +6,10 @@
     <title>food details</title>
 </head>
 <body>
-    <h1>{{food_details.name}}</h1>
-    {{food_details.price}}
-    {{food_details.place}}
+    {% for food_detail in food_details %}
+    <h1>{{food_detail.name}}</h1>
+    <p>{{food_detail.price}}</p>
+    <p>{{food_detail.place}}</p>
+    {% endfor %}
 </body>
 </html>

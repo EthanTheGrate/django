@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import food
+from .models import Food
 
 # Create your views here.
 def index(request):
-    food_details = food.objects.all()
+    food_details = Food.objects.all()
     data = {
         "food_details" : food_details
     }
-    return render("index.html", data)
+    return render(request, "index.html", data)
